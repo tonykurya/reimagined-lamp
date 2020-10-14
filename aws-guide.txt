@@ -1,0 +1,58 @@
+Role ARN
+arn:aws:iam::661989291313:role/eksDevClusterRole
+
+eks-dev
+PrivateSubnet01Block	192.168.128.0/18
+PrivateSubnet02Block	192.168.192.0/18
+PublicSubnet01Block	192.168.0.0/18
+PublicSubnet02Block	192.168.64.0/18
+VpcBlock	192.168.0.0/16
+
+SecurityGroups	sg-0aeb669fd10fbd252
+
+SubnetIds	subnet-08f9bc0a8af385e84,subnet-03ab35bfd8c582275,subnet-0610dab1934787586,subnet-0f0e91195ad8c4cc9
+
+VpcId	vpc-026a3dd8ba4dc7830
+
+API Server Endpoint
+https://0029AAB0445500E250F21138E688A7AB.gr7.us-east-2.eks.amazonaws.com
+
+Certificate Authority
+LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJd01UQXhNekUyTkRFeU5Wb1hEVE13TVRBeE1URTJOREV5TlZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTHU4ClBTRlJPdFl0S2Y3VmFrN2g4QkZhTGNtUTdOVXRpZko5aXpSOEdFeHp2ejdSbEN5Zys0TDEzdDdTMkNKZVlMSnoKZjljMFl2ZDNOdmRoWWgwNnNDNS9wVnoxQ3Z0YThmUG5uUUx2M0ZFODJ4cldkeHJpd3ZZNTh1dWhpNmppZDd3aApQMm9GaDROeERsNmRuWStvL0JTQWlHN1JXMzRYQ1h1ZlVQYnFLYmxhZlFCMG9YSE56dXVKaHZZV1plL3J6a1lyCnlhdlJSSlUwTkh1QktoQkpkeXJUKzJDd0dheXIvcFI2NHdNcFJxWERqTUNmL1BibWpRdWFzVnM0TmhydFQ2MmYKK0pnRlJKSW05NVk4bFI3bnpMc091azVwQ0w4TWJxdWIrNm9rUzF2Z00xQW55V1FWazErbzg0RFZBcTN5SnFoNAphVG9JWU5VRTdQVG5aTDQycUs4Q0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFIT3oxTGdUdSswRDBXNUNqM0VFSXV6VFg0cU8KWXlZNmlMSXdocHJ0RGpvb01IRlZ6WGNaYVUvNVNsaG5Nam1QWG1lME5ZNXV0L1Q3Y2FhQks0UGU3dDFXZDBESQozd01oTVBqRGVNUWo4d2Y1T1NpRUMyeFVGZ2dsNGdWYW9oU29Wb2F2aFpEcnRWdTRvb01Ta25Wakp2azJtTVB0Clp4Q3oyMFh5ckJDVnhHdU1qUWxUNUQrSkE3ZTgxNElHdmVFSWhWbXljWC9uWGFJVDZVTFV2bGR6N3p5cldCdGoKWXhqeVdDVjgzamFHb1VSK3ZyYXF1djNMYW1WSE1UMU1hRklqYnBYSWQ3YTl4QnA3eDczSTRlZVpJVlZiaXU2bwpsdzJLbFlrVm16TVhiN3ZEN1BZZEViN1RWNDg0WWlLaTQ2djlEUC9icnVlYklibk1zNm1kRVRraTU3OD0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+
+aws eks --region us-east-2 update-kubeconfig --name eks-dev
+
+
+Amazon EKS node role in the IAM console
+DEVeksEC2NodeGroupRole
+
+arn:aws:iam::661989291313:role/DEVeksEC2NodeGroupRole
+
+
+Configure Node Group
+ngeks1
+
+
+Key concepts
+------------
+https://docs.aws.amazon.com/eks/latest/userguide/sample-deployment.html
+
+service, deployment, pods, and namespace
+
+Bastion Host ID
+
+ i-0fcf97ecf5727f32e
+
+
+EKS Nodes ip
+ip-192-168-212-117.us-east-2.compute.internal
+
+ip-192-168-31-121.us-east-2.compute.internal
+
+
+ssh -i "/home/eks-dev-key.pem" ec2-user@ip-192-168-212-117.us-east-2.compute.internal
+
+sudo yum install amazon-efs-utils -y
+
+
+
